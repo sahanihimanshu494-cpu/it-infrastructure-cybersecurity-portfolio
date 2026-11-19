@@ -1,0 +1,71 @@
+! ==========================================================
+! Device: Office-Switch (Cisco Catalyst 2960)
+! Role: Layer 2 Access & 802.1Q Trunking Switch
+! ==========================================================
+hostname Office-Switch
+no ip domain-lookup
+
+vlan 10
+ name IT_ADMIN
+vlan 20
+ name HR_OPERATIONS
+vlan 30
+ name SALES_SUPPORT
+vlan 99
+ name MANAGEMENT_NATIVE
+exit
+
+interface range fastEthernet 0/1 - 5
+ description IT_ADMIN_DEPARTMENT
+ switchport mode access
+ switchport access vlan 10
+ switchport port-security
+ switchport port-security maximum 2
+ switchport port-security violation restrict
+ spanning-tree portfast
+ exit
+
+interface range fastEthernet 0/6 - 10
+ description HR_OPERATIONS_DEPARTMENT
+ switchport mode access
+ switchport access vlan 20
+ switchport port-security
+ switchport port-security maximum 2
+ switchport port-security violation restrict
+ spanning-tree portfast
+ exit
+
+interface range fastEthernet 0/11 - 15
+ description SALES_SUPPORT_DEPARTMENT
+ switchport mode access
+ switchport access vlan 30
+ switchport port-security
+ switchport port-security maximum 2
+ switchport port-security violation restrict
+ spanning-tree portfast
+ exit
+
+interface range fastEthernet 0/16 - 24, gigabitEthernet 0/2
+ description UNUSED_DISABLED_PORTS
+ switchport mode access
+ switchport access vlan 99
+ shutdown
+ exit
+
+interface vlan 99
+ description SWITCH_MANAGEMENT_IP
+ ip address 192.168.10.194 255.255.255.224
+ no shutdown
+ exit
+
+ip default-gateway 192.168.10.193
+
+interface gigabitEthernet 0/1
+ description TRUNK_TO_OFFICE_ROUTER
+ switchport mode trunk
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 10,20,30,99
+ no shutdown
+ exit
+
+end
