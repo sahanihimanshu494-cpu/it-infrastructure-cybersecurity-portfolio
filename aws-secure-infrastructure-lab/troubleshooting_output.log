@@ -1,0 +1,37 @@
+============================================================
+  AWS & NETWORK INFRASTRUCTURE DIAGNOSTIC REPORT
+  Timestamp: Thu Nov 19 01:26:19 PM EST 2026
+============================================================
+
+[1] Active Network Interfaces & IP Configuration:
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+eth0             UP             192.168.109.128/24 fe80::41f2:6d34:35a3:c608/64 
+docker0          UP             172.17.0.1/16 fe80::fc2b:6eff:fe0b:85a9/64 
+vethd94105a@if2  UP             fe80::ba:dbff:fe19:8297/64 
+
+[2] Default Gateway & Routing Table:
+default via 192.168.109.2 dev eth0 proto dhcp src 192.168.109.128 metric 100 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 
+192.168.109.0/24 dev eth0 proto kernel scope link src 192.168.109.128 metric 100 
+
+[3] DNS Resolution Verification:
+64:ff9b::4bb:f7a0 github.com
+
+[4] LocalStack Cloud Gateway & Service Health (Port 4566):
+"ec2": "running"
+"iam": "running"
+"s3": "available"
+"sns": "running"
+
+[5] Deployed AWS VPC & EC2 Endpoint Audit:
+-----------------------------------------------------------------------------
+|                          DescribeSecurityGroups                           |
++-----------------------+-----------------------------------+---------------+
+|        GroupId        |             GroupName             |     VpcId     |
++-----------------------+-----------------------------------+---------------+
+|  sg-2898b5de115f7ae6b |  default                          |  vpc-32d757db |
+|  sg-9dfb2568b5dc1f6de |  default                          |  vpc-ffdc9111 |
+|  sg-6e0cd44ca1adc5aa3 |  himanshu-secure-vpc-hardened-sg  |  vpc-ffdc9111 |
++-----------------------+-----------------------------------+---------------+
+
+[✓] Diagnostic & Security Audit Completed Successfully.
