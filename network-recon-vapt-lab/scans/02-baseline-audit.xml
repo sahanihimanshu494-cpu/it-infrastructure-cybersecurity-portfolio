@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.99 scan initiated Sun Nov 22 09:04:56 2026 as: /usr/lib/nmap/nmap -sV -sC -&#45;script=http-headers,http-methods,redis-info -p 80,8080,6379 -oA scans/02-baseline-audit 172.28.0.10 172.28.0.20 172.28.0.30 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -sV -sC -&#45;script=http-headers,http-methods,redis-info -p 80,8080,6379 -oA scans/02-baseline-audit 172.28.0.10 172.28.0.20 172.28.0.30" start="1795356296" startstr="Sun Nov 22 09:04:56 2026" version="7.99" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="3" services="80,6379,8080"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.28.0.20" addrtype="ipv4"/>
+<address addr="62:6E:67:4B:E1:A0" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.28.0.30" addrtype="ipv4"/>
+<address addr="7A:2D:66:1C:AF:2E" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.28.0.10" addrtype="ipv4"/>
+<address addr="BA:34:F7:3C:91:D6" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1795356297" endtime="1795356303"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.28.0.10" addrtype="ipv4"/>
+<address addr="BA:34:F7:3C:91:D6" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="nginx" version="1.31.9" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.31.9</cpe></service><script id="http-server-header" output="nginx/1.31.9"><elem>nginx/1.31.9</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-headers" output="&#xa;  Server: nginx/1.31.9&#xa;  Date: Sun, 22 Nov 2026 14:05:03 GMT&#xa;  Content-Type: text/html&#xa;  Content-Length: 896&#xa;  Last-Modified: Wed, 11 Nov 2026 19:28:42 GMT&#xa;  Connection: close&#xa;  ETag: &quot;6af4c1ea-380&quot;&#xa;  Accept-Ranges: bytes&#xa;  &#xa;  (Request type: HEAD)&#xa;"/></port>
+<port protocol="tcp" portid="6379"><state state="closed" reason="reset" reason_ttl="64"/><service name="redis" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="closed" reason="reset" reason_ttl="64"/><service name="http-proxy" method="table" conf="3"/></port>
+</ports>
+<times srtt="15" rttvar="2112" to="100000"/>
+</host>
+<host starttime="1795356297" endtime="1795356303"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.28.0.20" addrtype="ipv4"/>
+<address addr="62:6E:67:4B:E1:A0" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="closed" reason="reset" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="6379"><state state="closed" reason="reset" reason_ttl="64"/><service name="redis" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="SimpleHTTPServer" version="0.6" extrainfo="Python 3.11.18" method="probed" conf="10"><cpe>cpe:/a:python:simplehttpserver:0.6</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-server-header" output="SimpleHTTP/0.6 Python/3.11.18"><elem>SimpleHTTP/0.6 Python/3.11.18</elem>
+</script><script id="http-headers" output="&#xa;  Server: SimpleHTTP/0.6 Python/3.11.18&#xa;  Date: Sun, 22 Nov 2026 14:05:03 GMT&#xa;  Content-type: text/html; charset=utf-8&#xa;  Content-Length: 805&#xa;  &#xa;  (Request type: HEAD)&#xa;"/></port>
+</ports>
+<times srtt="105" rttvar="2158" to="100000"/>
+</host>
+<host starttime="1795356297" endtime="1795356303"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.28.0.30" addrtype="ipv4"/>
+<address addr="7A:2D:66:1C:AF:2E" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="closed" reason="reset" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="6379"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="redis" product="Redis key-value store" version="7.4.12" extrainfo="64 bits" method="probed" conf="10"><cpe>cpe:/a:redislabs:redis:7.4.12</cpe><cpe>cpe:/a:redis:redis:7.4.12</cpe></service><script id="redis-info" output="&#xa;  Version: 7.4.12&#xa;  Operating System: Linux 7.1.5+kali-amd64 x86_64&#xa;  Architecture: 64 bits&#xa;  Process ID: 1&#xa;  Used CPU (sys): 0.029450&#xa;  Used CPU (user): 0.051537&#xa;  Connected clients: 1&#xa;  Connected slaves: 0&#xa;  Used memory: 990.14K&#xa;  Role: master&#xa;  Bind addresses: &#xa;    *&#xa;    -::*&#xa;  Client connections: &#xa;    172.28.0.1"><elem key="Version">7.4.12</elem>
+<elem key="Operating System">Linux 7.1.5+kali-amd64 x86_64</elem>
+<elem key="Architecture">64 bits</elem>
+<elem key="Process ID">1</elem>
+<elem key="Used CPU (sys)">0.029450</elem>
+<elem key="Used CPU (user)">0.051537</elem>
+<elem key="Connected clients">1</elem>
+<elem key="Connected slaves">0</elem>
+<elem key="Used memory">990.14K</elem>
+<elem key="Role">master</elem>
+<table key="Bind addresses">
+<elem>*</elem>
+<elem>-::*</elem>
+</table>
+<table key="Client connections">
+<elem>172.28.0.1</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="closed" reason="reset" reason_ttl="64"/><service name="http-proxy" method="table" conf="3"/></port>
+</ports>
+<times srtt="24" rttvar="2118" to="100000"/>
+</host>
+<runstats><finished time="1795356303" timestr="Sun Nov 22 09:05:03 2026" summary="Nmap done at Sun Nov 22 09:05:03 2026; 3 IP addresses (3 hosts up) scanned in 7.01 seconds" elapsed="7.01" exit="success"/><hosts up="3" down="0" total="3"/>
+</runstats>
+</nmaprun>

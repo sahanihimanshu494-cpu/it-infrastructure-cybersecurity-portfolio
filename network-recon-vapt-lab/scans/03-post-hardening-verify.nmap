@@ -1,0 +1,51 @@
+# Nmap 7.99 scan initiated Sun Nov 22 09:17:39 2026 as: /usr/lib/nmap/nmap -sV --script=http-headers -p 80,8080,6379 -oA scans/03-post-hardening-verify 172.28.0.10 172.29.0.20 172.29.0.30
+Nmap scan report for 172.28.0.10
+Host is up (0.000063s latency).
+
+PORT     STATE  SERVICE    VERSION
+80/tcp   open   http       nginx
+| http-headers: 
+|   Server: nginx
+|   Date: Sun, 22 Nov 2026 14:17:47 GMT
+|   Content-Type: text/html
+|   Content-Length: 896
+|   Last-Modified: Wed, 11 Nov 2026 19:28:42 GMT
+|   Connection: close
+|   ETag: "6af4c1ea-380"
+|   X-Frame-Options: DENY
+|   X-Content-Type-Options: nosniff
+|   Accept-Ranges: bytes
+|   
+|_  (Request type: HEAD)
+6379/tcp closed redis
+8080/tcp closed http-proxy
+MAC Address: 4A:16:EF:56:29:60 (Unknown)
+
+Nmap scan report for 172.29.0.20
+Host is up (0.000022s latency).
+
+PORT     STATE  SERVICE VERSION
+80/tcp   closed http
+6379/tcp closed redis
+8080/tcp open   http    SimpleHTTPServer 0.6 (Python 3.11.18)
+| http-headers: 
+|   Server: SimpleHTTP/0.6 Python/3.11.18
+|   Date: Sun, 22 Nov 2026 14:17:53 GMT
+|   Content-type: text/html; charset=utf-8
+|   Content-Length: 805
+|   
+|_  (Request type: HEAD)
+|_http-server-header: SimpleHTTP/0.6 Python/3.11.18
+MAC Address: D2:F2:2C:7A:E4:18 (Unknown)
+
+Nmap scan report for 172.29.0.30
+Host is up (0.000076s latency).
+
+PORT     STATE  SERVICE    VERSION
+80/tcp   closed http
+6379/tcp open   redis      Redis key-value store
+8080/tcp closed http-proxy
+MAC Address: 5E:C1:13:54:05:B7 (Unknown)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Nov 22 09:17:53 2026 -- 3 IP addresses (3 hosts up) scanned in 13.48 seconds

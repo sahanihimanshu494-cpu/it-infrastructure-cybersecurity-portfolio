@@ -1,0 +1,26 @@
+services:
+  edge-proxy:
+    image: nginx:alpine
+    container_name: corp-edge-proxy
+    networks:
+      corp_net:
+        ipv4_address: 172.28.0.10
+  internal-app:
+    image: python:3.11-alpine
+    container_name: corp-internal-app
+    command: python3 -m http.server 8080
+    networks:
+      corp_net:
+        ipv4_address: 172.28.0.20
+  backend-db:
+    image: redis:7-alpine
+    container_name: corp-backend-redis
+    networks:
+      corp_net:
+        ipv4_address: 172.28.0.30
+networks:
+  corp_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.0.0/24

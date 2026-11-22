@@ -1,0 +1,70 @@
+# Nmap 7.99 scan initiated Sun Nov 22 09:04:56 2026 as: /usr/lib/nmap/nmap -sV -sC --script=http-headers,http-methods,redis-info -p 80,8080,6379 -oA scans/02-baseline-audit 172.28.0.10 172.28.0.20 172.28.0.30
+Nmap scan report for 172.28.0.10
+Host is up (0.000015s latency).
+
+PORT     STATE  SERVICE    VERSION
+80/tcp   open   http       nginx 1.31.9
+|_http-server-header: nginx/1.31.9
+| http-methods: 
+|_  Supported Methods: GET HEAD
+| http-headers: 
+|   Server: nginx/1.31.9
+|   Date: Sun, 22 Nov 2026 14:05:03 GMT
+|   Content-Type: text/html
+|   Content-Length: 896
+|   Last-Modified: Wed, 11 Nov 2026 19:28:42 GMT
+|   Connection: close
+|   ETag: "6af4c1ea-380"
+|   Accept-Ranges: bytes
+|   
+|_  (Request type: HEAD)
+6379/tcp closed redis
+8080/tcp closed http-proxy
+MAC Address: BA:34:F7:3C:91:D6 (Unknown)
+
+Nmap scan report for 172.28.0.20
+Host is up (0.00011s latency).
+
+PORT     STATE  SERVICE VERSION
+80/tcp   closed http
+6379/tcp closed redis
+8080/tcp open   http    SimpleHTTPServer 0.6 (Python 3.11.18)
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: SimpleHTTP/0.6 Python/3.11.18
+| http-headers: 
+|   Server: SimpleHTTP/0.6 Python/3.11.18
+|   Date: Sun, 22 Nov 2026 14:05:03 GMT
+|   Content-type: text/html; charset=utf-8
+|   Content-Length: 805
+|   
+|_  (Request type: HEAD)
+MAC Address: 62:6E:67:4B:E1:A0 (Unknown)
+
+Nmap scan report for 172.28.0.30
+Host is up (0.000024s latency).
+
+PORT     STATE  SERVICE    VERSION
+80/tcp   closed http
+6379/tcp open   redis      Redis key-value store 7.4.12 (64 bits)
+| redis-info: 
+|   Version: 7.4.12
+|   Operating System: Linux 7.1.5+kali-amd64 x86_64
+|   Architecture: 64 bits
+|   Process ID: 1
+|   Used CPU (sys): 0.029450
+|   Used CPU (user): 0.051537
+|   Connected clients: 1
+|   Connected slaves: 0
+|   Used memory: 990.14K
+|   Role: master
+|   Bind addresses: 
+|     *
+|     -::*
+|   Client connections: 
+|_    172.28.0.1
+8080/tcp closed http-proxy
+MAC Address: 7A:2D:66:1C:AF:2E (Unknown)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Nov 22 09:05:03 2026 -- 3 IP addresses (3 hosts up) scanned in 7.01 seconds

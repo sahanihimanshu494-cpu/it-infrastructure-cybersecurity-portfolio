@@ -1,0 +1,8 @@
+# Nmap 7.99 scan initiated Sun Nov 22 09:04:56 2026 as: /usr/lib/nmap/nmap -sV -sC --script=http-headers,http-methods,redis-info -p 80,8080,6379 -oA scans/02-baseline-audit 172.28.0.10 172.28.0.20 172.28.0.30
+Host: 172.28.0.10 ()	Status: Up
+Host: 172.28.0.10 ()	Ports: 80/open/tcp//http//nginx 1.31.9/, 6379/closed/tcp//redis///, 8080/closed/tcp//http-proxy///
+Host: 172.28.0.20 ()	Status: Up
+Host: 172.28.0.20 ()	Ports: 80/closed/tcp//http///, 6379/closed/tcp//redis///, 8080/open/tcp//http//SimpleHTTPServer 0.6 (Python 3.11.18)/
+Host: 172.28.0.30 ()	Status: Up
+Host: 172.28.0.30 ()	Ports: 80/closed/tcp//http///, 6379/open/tcp//redis//Redis key-value store 7.4.12 (64 bits)/, 8080/closed/tcp//http-proxy///
+# Nmap done at Sun Nov 22 09:05:03 2026 -- 3 IP addresses (3 hosts up) scanned in 7.01 seconds
