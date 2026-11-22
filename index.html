@@ -4,86 +4,150 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Himanshu Sahani — IT Infrastructure, Cybersecurity, AWS Cloud, DevOps and Networking portfolio.">
-  <meta name="theme-color" content="#0b1220">
-  <title>Himanshu Sahani | IT Infrastructure & Cybersecurity</title>
+  <meta name="theme-color" content="#060908">
+  <title>Himanshu Sahani | Cybersecurity & IT Infrastructure</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <!-- Top Header with Center Pill Nav -->
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Himanshu Sahani home"><span class="brand-mark">HS<span>.</span></span><span class="brand-name">HIMANSHU <b>SAHANI</b></span></a>
-    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
-    <nav class="nav">
-      <a href="#about">About</a><a href="#domains">Expertise</a><a href="#projects">Projects</a><a href="#roadmap">Learning</a><a href="#contact" class="nav-cta">Contact <span>↗</span></a>
+    <a class="brand" href="#home" aria-label="Himanshu Sahani home">
+      <span class="brand-icon">🛡</span>
+      <span class="brand-name">HS<b>.SEC</b></span>
+    </a>
+
+    <nav class="nav-pill" id="navPill">
+      <a href="#about">About</a>
+      <a href="#domains">Expertise</a>
+      <a href="#projects">Work</a>
+      <a href="#roadmap">Roadmap</a>
     </nav>
+
+    <div class="header-right">
+      <a href="#contact" class="btn-hire">Hire Me <span>↗</span></a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+    </div>
   </header>
 
   <main>
+    <!-- Hero Section matching Cyber Security Template -->
     <section class="hero section-wrap" id="home">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="status-dot"></span> IT INFRASTRUCTURE • SECURITY • CLOUD</div>
-        <h1>Building reliable systems.<br><span>Securing what matters.</span></h1>
-        <p class="hero-text">I'm <strong>Himanshu Sahani</strong> — an IT professional developing practical capabilities across cybersecurity, cloud computing, DevOps, networking and system administration.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#projects">Explore my work <span>↘</span></a>
-          <a class="button button-secondary" href="https://github.com/sahanihimanshu494-cpu" target="_blank" rel="noreferrer">GitHub profile <span>↗</span></a>
-        </div>
-        <div class="hero-meta"><span><i></i> Hands-on labs & projects</span><span>India · Open to opportunities</span></div>
-      </div>
-      <div class="hero-visual">
-        <div class="visual-top"><span>FIELD_NOTES / 001</span><span class="live-label"><i></i> LEARNING IN PROGRESS</span></div>
-        <div class="terminal">
-          <div class="terminal-bar"><span></span><span></span><span></span><small>himanshu@portfolio:~</small></div>
-          <div class="terminal-body">
-            <p><b>$</b> whoami</p><p class="terminal-output">Himanshu Sahani</p>
-            <p><b>$</b> focus --domains</p>
-            <p class="terminal-output">cybersecurity<br>aws-cloud<br>devops<br>networking<br>linux & windows</p>
-            <p><b>$</b> mission</p><p class="terminal-output accent-text">learn → build → secure → improve<span class="cursor">_</span></p>
+      <div class="hero-watermark" aria-hidden="true">PORTFOLIO</div>
+
+      <div class="hero-grid">
+        <!-- Left Column: Intro & CTAs -->
+        <div class="hero-left">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-title">
+            HIMANSHU<br>
+            <span class="gradient-name">SAHANI</span>
+          </h1>
+          <div class="hero-role">CYBERSECURITY &amp; IT INFRASTRUCTURE ENGINEER</div>
+          <p class="hero-desc">
+            Hands-on IT professional building and securing enterprise networks, AWS cloud environments, Linux/Windows servers, and automated VAPT workflows.
+          </p>
+          <div class="hero-actions">
+            <a class="btn-neon" href="#projects">View My Work <span>→</span></a>
+            <a class="btn-ghost" href="https://github.com/sahanihimanshu494-cpu" target="_blank" rel="noreferrer">GitHub Profile <span>↗</span></a>
+          </div>
+          <div class="hero-availability">
+            <span class="pulse-dot"></span> AVAILABLE FOR INFRASTRUCTURE &amp; SECURITY ROLES
           </div>
         </div>
-        <div class="visual-foot"><span>01 / PRACTICAL MINDSET</span><span>CONTINUOUS LEARNING ↗</span></div>
+
+        <!-- Center Column: Portrait Showcase -->
+        <div class="hero-center">
+          <div class="portrait-frame">
+            <img src="profile.png" alt="Himanshu Sahani" onerror="this.style.display='none'; document.getElementById('avatarFallback').style.display='flex';">
+            <div id="avatarFallback" class="avatar-fallback" style="display:none;">
+              <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="74" r="38" fill="#18221e" stroke="#c6ff00" stroke-width="2"/>
+                <path d="M35 205 C35 152, 165 152, 165 205" fill="#121a17" stroke="#00f5d4" stroke-width="2"/>
+                <text x="100" y="81" fill="#c6ff00" font-family="DM Mono, monospace" font-size="18" font-weight="700" text-anchor="middle">HS_</text>
+              </svg>
+            </div>
+            <div class="floating-badge">
+              <span class="badge-dot"></span> KALI • AWS • CCNA
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Vertical Highlights -->
+        <div class="hero-right">
+          <div class="stat-item">
+            <span class="stat-num neon-lime">03+</span>
+            <span class="stat-label">DEPLOYED<br>SECURITY LABS</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num white-num">06</span>
+            <span class="stat-label">CORE INFRA<br>DOMAINS</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num neon-cyan">100%</span>
+            <span class="stat-label">HANDS-ON<br>VERIFIED</span>
+          </div>
+        </div>
       </div>
-      <div class="hero-gridline"></div>
     </section>
 
-    <section class="ticker" aria-label="Focus areas"><div>CYBERSECURITY <b>✳</b> AWS CLOUD <b>✳</b> DEVOPS <b>✳</b> NETWORKING <b>✳</b> LINUX ADMINISTRATION <b>✳</b> IT INFRASTRUCTURE <b>✳</b></div></section>
+    <!-- Neon Ticker Bar -->
+    <section class="ticker" aria-label="Focus areas">
+      <div>
+        <span>◆</span> NETWORK SECURITY <span>◆</span> CLOUD INFRASTRUCTURE <span>◆</span> VULNERABILITY ASSESSMENT <span>◆</span> PENETRATION TESTING <span>◆</span> LINUX &amp; WINDOWS SERVER <span>◆</span> TERRAFORM &amp; DOCKER <span>◆</span>
+      </div>
+    </section>
 
+    <!-- About & Education -->
     <section class="section-wrap section" id="about">
-      <div class="section-heading"><div><span class="section-kicker">01 / PROFILE</span><h2>More than a toolset.</h2></div><p>A practical, infrastructure-first approach to understanding how systems connect, operate and stay secure.</p></div>
+      <div class="section-heading">
+        <div><span class="section-kicker">01 / PROFILE</span><h2>Infrastructure-first.<br><span>Security-driven.</span></h2></div>
+        <p>Understanding how systems connect, operate, and stay resilient against real-world threats.</p>
+      </div>
       <div class="about-grid">
-        <article class="about-card panel">
+        <article class="panel about-card">
           <span class="card-index">ABOUT ME</span>
-          <h3>Curious about systems.<br>Committed to learning.</h3>
-          <p>I have a foundation in computer networking and cybersecurity, supported by learning in Linux, Windows administration and AWS cloud fundamentals. I use guided labs and personal practice environments to strengthen my understanding through configuration, testing, troubleshooting and documentation.</p>
-          <p>This portfolio will grow with verified projects, lab evidence, technical notes and lessons learned. Topics currently being studied are presented as learning areas—not as claims of professional mastery.</p>
+          <h3>Curious about systems.<br>Committed to execution.</h3>
+          <p>I have a strong foundation in computer networking and cybersecurity, backed by hands-on experience in Linux, Windows Server administration, and AWS cloud infrastructure. I build controlled lab environments to configure, audit, harden, and document enterprise-grade architectures.</p>
+          <p>Every completed project in this portfolio includes reproducible code, architecture diagrams, security audit logs, and verified remediation steps.</p>
         </article>
-        <article class="education-card panel">
-          <span class="card-index">EDUCATION & TRAINING</span>
-          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Diploma in Computer Networking and Cyber Security</h4><p>Ducat IT Training Institute</p></div></div>
-          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Diploma in Advanced Computer Application</h4><p>ADCA · MS Office & Microsoft Ecosystem, Tally ERP 9, CorelDRAW, HTML</p></div></div>
-          <div class="education-note">Learning through practical exercises, documentation and personal lab environments.</div>
+        <article class="panel education-card">
+          <span class="card-index">EDUCATION &amp; CERTIFICATIONS</span>
+          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Diploma in Computer Networking &amp; Cyber Security</h4><p>Ducat IT Training Institute · CCNA, Linux, Windows Server, Security</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Diploma in Advanced Computer Application (ADCA)</h4><p>Enterprise Productivity, IT Fundamentals &amp; Web Foundations</p></div></div>
+          <div class="education-note">Continuous practice in Kali Linux, AWS VPC/IAM, Terraform IaC &amp; Nmap/Burp Suite labs.</div>
         </article>
       </div>
     </section>
 
+    <!-- Expertise / Domains -->
     <section class="section-wrap section" id="domains">
-      <div class="section-heading"><div><span class="section-kicker">02 / TECHNICAL DOMAINS</span><h2>Areas I work to understand.</h2></div><p>Core concepts and technologies across the IT infrastructure lifecycle.</p></div>
+      <div class="section-heading">
+        <div><span class="section-kicker">02 / TECHNICAL DOMAINS</span><h2>Core areas of <span>expertise.</span></h2></div>
+        <p>Practical capabilities across offensive/defensive security, cloud, and systems administration.</p>
+      </div>
       <div class="domain-grid">
-        <article class="domain-card panel"><div class="domain-icon">⌁</div><span class="card-index">01 / SECURITY</span><h3>Cybersecurity</h3><p>Offensive security fundamentals, defensive monitoring and security improvement.</p><ul><li>Reconnaissance & enumeration</li><li>Vulnerability assessment</li><li>OWASP & web security</li><li>Log analysis & incident response</li><li>Security hardening</li></ul><div class="tag-row"><span>Nmap</span><span>Burp Suite</span><span>Wireshark</span><span>Nessus</span></div></article>
-        <article class="domain-card panel"><div class="domain-icon">☁</div><span class="card-index">02 / CLOUD</span><h3>AWS Cloud</h3><p>Cloud infrastructure, access control, networking, monitoring and resilience.</p><ul><li>IAM, EC2 & S3</li><li>VPC, subnets & routing</li><li>Security groups & NACLs</li><li>CloudWatch & CloudTrail</li><li>Backup & high availability</li></ul><div class="tag-row"><span>AWS</span><span>EC2</span><span>VPC</span><span>IAM</span></div></article>
-        <article class="domain-card panel"><div class="domain-icon">⟳</div><span class="card-index">03 / AUTOMATION</span><h3>DevOps</h3><p>Version control, repeatable deployments and infrastructure automation.</p><ul><li>Git & GitHub workflows</li><li>CI/CD fundamentals</li><li>Docker & containers</li><li>Terraform & Ansible</li><li>Monitoring & automation</li></ul><div class="tag-row"><span>Git</span><span>Docker</span><span>Jenkins</span><span>Terraform</span></div></article>
-        <article class="domain-card panel"><div class="domain-icon">⌘</div><span class="card-index">04 / CONNECTIVITY</span><h3>Networking</h3><p>Network design, configuration, troubleshooting and secure connectivity.</p><ul><li>TCP/IP, subnetting & DNS</li><li>Routing & switching</li><li>VLANs, ACLs & NAT</li><li>Firewall & VPN concepts</li><li>Monitoring & packet analysis</li></ul><div class="tag-row"><span>CCNA</span><span>Packet Tracer</span><span>Wireshark</span></div></article>
-        <article class="domain-card panel"><div class="domain-icon">$_</div><span class="card-index">05 / SYSTEMS</span><h3>Linux Administration</h3><p>Server operations, permissions, services, automation and hardening.</p><ul><li>Users, groups & permissions</li><li>SSH, services & processes</li><li>Bash & task scheduling</li><li>Storage & log management</li><li>Server security</li></ul><div class="tag-row"><span>Linux</span><span>Bash</span><span>SSH</span></div></article>
-        <article class="domain-card panel"><div class="domain-icon">▣</div><span class="card-index">06 / ENTERPRISE</span><h3>Windows Server</h3><p>Identity, access, directory services and enterprise administration.</p><ul><li>Active Directory fundamentals</li><li>DNS & DHCP services</li><li>Group Policy</li><li>File sharing & permissions</li><li>PowerShell fundamentals</li></ul><div class="tag-row"><span>Windows Server</span><span>AD DS</span><span>PowerShell</span></div></article>
+        <article class="panel domain-card"><div class="domain-icon">⌁</div><span class="card-index">01 / SECURITY</span><h3>Cybersecurity</h3><p>Reconnaissance, vulnerability assessment, and system hardening.</p><ul><li>Nmap NSE enumeration &amp; CVSS scoring</li><li>Web security &amp; OWASP testing</li><li>Network segmentation &amp; ACLs</li><li>Log analysis &amp; incident response</li></ul><div class="tag-row"><span>Nmap</span><span>Burp Suite</span><span>Wireshark</span><span>Nessus</span></div></article>
+        <article class="panel domain-card"><div class="domain-icon">☁</div><span class="card-index">02 / CLOUD</span><h3>AWS Cloud</h3><p>Secure cloud architecture, IAM governance, and monitoring.</p><ul><li>Custom VPC, subnets &amp; NAT Gateway</li><li>Security Groups, NACLs &amp; VPC Endpoints</li><li>EC2 (IMDSv2), IAM Roles &amp; S3</li><li>CloudWatch &amp; SNS security alerting</li></ul><div class="tag-row"><span>AWS</span><span>VPC</span><span>EC2</span><span>IAM</span></div></article>
+        <article class="panel domain-card"><div class="domain-icon">⟳</div><span class="card-index">03 / AUTOMATION</span><h3>DevOps &amp; IaC</h3><p>Repeatable infrastructure deployment and container isolation.</p><ul><li>Terraform modular infrastructure</li><li>Docker multi-tier isolated networks</li><li>Git &amp; GitHub version workflows</li><li>Bash &amp; Python security automation</li></ul><div class="tag-row"><span>Terraform</span><span>Docker</span><span>Python</span><span>Bash</span></div></article>
+        <article class="panel domain-card"><div class="domain-icon">⌘</div><span class="card-index">04 / CONNECTIVITY</span><h3>Networking</h3><p>Enterprise routing, switching, and segmented network design.</p><ul><li>TCP/IP, VLSM subnetting &amp; DNS</li><li>802.1Q VLANs &amp; Router-on-a-Stick</li><li>DHCP pools &amp; Switch Port Security</li><li>Packet capture &amp; troubleshooting</li></ul><div class="tag-row"><span>CCNA</span><span>Packet Tracer</span><span>VLANs</span></div></article>
+        <article class="panel domain-card"><div class="domain-icon">$_</div><span class="card-index">05 / SYSTEMS</span><h3>Linux Administration</h3><p>Server configuration, hardening, and diagnostic scripting.</p><ul><li>Users, permissions &amp; SSH hardening</li><li>Nginx reverse proxy &amp; security headers</li><li>Process, storage &amp; log management</li><li>Automated network health scripts</li></ul><div class="tag-row"><span>Kali / Ubuntu</span><span>Bash</span><span>Nginx</span></div></article>
+        <article class="panel domain-card"><div class="domain-icon">▣</div><span class="card-index">06 / ENTERPRISE</span><h3>Windows Server</h3><p>Directory services, identity management, and group policy.</p><ul><li>Active Directory Domain Services (AD DS)</li><li>DNS &amp; DHCP server administration</li><li>Group Policy Objects (GPO)</li><li>PowerShell administration basics</li></ul><div class="tag-row"><span>Windows Server</span><span>AD DS</span><span>PowerShell</span></div></article>
       </div>
     </section>
 
+    <!-- Projects & Labs (All 6 Cards) -->
     <section class="section-wrap section" id="projects">
-      <div class="section-heading"><div><span class="section-kicker">03 / SELECTED WORK</span><h2>Projects & practical labs.</h2></div><p>Project cards will be updated as each lab is completed, tested and documented.</p></div>
+      <div class="section-heading">
+        <div><span class="section-kicker">03 / SELECTED WORK</span><h2>Projects &amp; <span>practical labs.</span></h2></div>
+        <p>Verified hands-on implementations with code, scan evidence, and documentation.</p>
+      </div>
       <div class="project-grid">
         <article class="project-card panel" onclick="window.open('https://github.com/sahanihimanshu494-cpu/it-infrastructure-cybersecurity-portfolio/tree/main/network-recon-vapt-lab', '_blank', 'noopener,noreferrer')" style="cursor: pointer;"><div class="project-top"><span class="project-type">NETWORK SECURITY</span><span class="project-status">COMPLETED</span></div><h3><a href="https://github.com/sahanihimanshu494-cpu/it-infrastructure-cybersecurity-portfolio/tree/main/network-recon-vapt-lab" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Network reconnaissance &amp; assessment ↗</a></h3><p>3-tier corporate lab audit (172.28.0.0/24) using Nmap NSE, automated Python CVSS v3.1 risk reporting, internal subnet isolation, and Redis/Nginx hardening.</p><div class="project-bottom"><span>Nmap · Python · Docker</span><a href="https://github.com/sahanihimanshu494-cpu/it-infrastructure-cybersecurity-portfolio/tree/main/network-recon-vapt-lab" target="_blank" rel="noopener noreferrer" style="color: inherit; font-weight: 600;">View Lab ↗</a></div></article>
         <article class="project-card panel"><div class="project-top"><span class="project-type">WEB SECURITY</span><span class="project-status">PLANNED</span></div><h3>Web application security testing</h3><p>Practice request inspection and common web security tests against intentionally vulnerable training applications.</p><div class="project-bottom"><span>Burp Suite · OWASP</span><span>02</span></div></article>
@@ -92,24 +156,41 @@
         <article class="project-card panel"><div class="project-top"><span class="project-type">DEVOPS</span><span class="project-status">PLANNED</span></div><h3>Automated deployment pipeline</h3><p>Create a basic CI/CD workflow for a sample application and document each pipeline stage.</p><div class="project-bottom"><span>GitHub Actions · Docker</span><span>05</span></div></article>
         <article class="project-card panel" onclick="window.open('https://github.com/sahanihimanshu494-cpu/it-infrastructure-cybersecurity-portfolio/tree/main/small-office-vlan-lab', '_blank', 'noopener,noreferrer')" style="cursor: pointer;"><div class="project-top"><span class="project-type">NETWORK ENGINEERING</span><span class="project-status">COMPLETED</span></div><h3><a href="https://github.com/sahanihimanshu494-cpu/it-infrastructure-cybersecurity-portfolio/tree/main/small-office-vlan-lab" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Small-office network design ↗</a></h3><p>Segmented enterprise network with VLSM IP plan, 802.1Q VLANs, Router-on-a-Stick routing, DHCP pools, and Port Security.</p><div class="project-bottom"><span>Packet Tracer · VLAN · ROAS</span><a href="https://github.com/sahanihimanshu494-cpu/it-infrastructure-cybersecurity-portfolio/tree/main/small-office-vlan-lab" target="_blank" rel="noopener noreferrer" style="color: inherit; font-weight: 600;">View Lab ↗</a></div></article>
       </div>
-      <p class="disclaimer">Project status is shown transparently. Planned items are learning targets, not completed client engagements or professional work.</p>
+      <p class="disclaimer">Project status is displayed transparently. Completed cards link directly to full GitHub repositories with scan outputs, configurations, and screenshots.</p>
     </section>
 
+    <!-- Methodology Roadmap -->
     <section class="section-wrap section" id="roadmap">
-      <div class="section-heading"><div><span class="section-kicker">04 / CONTINUOUS DEVELOPMENT</span><h2>Learn. Build. Document.</h2></div><p>A structured path from fundamentals to more advanced, evidence-backed implementations.</p></div>
+      <div class="section-heading">
+        <div><span class="section-kicker">04 / METHODOLOGY</span><h2>Audit. Harden. <span>Verify.</span></h2></div>
+        <p>A disciplined engineering workflow applied across every lab and infrastructure build.</p>
+      </div>
       <div class="roadmap panel">
-        <div class="roadmap-step"><span>01</span><div><h3>Build strong foundations</h3><p>Networking, operating systems, cloud fundamentals and security principles.</p></div><b>FOUNDATIONS</b></div>
-        <div class="roadmap-step"><span>02</span><div><h3>Practice in controlled labs</h3><p>Configure services, test intentionally vulnerable systems and analyze sample events.</p></div><b>HANDS-ON</b></div>
-        <div class="roadmap-step"><span>03</span><div><h3>Automate & improve</h3><p>Use scripts, infrastructure as code, deployment pipelines and monitoring.</p></div><b>IMPLEMENT</b></div>
-        <div class="roadmap-step"><span>04</span><div><h3>Publish evidence</h3><p>Share sanitized diagrams, reproducible steps, findings and remediation notes.</p></div><b>DOCUMENT</b></div>
+        <div class="roadmap-step"><span>01</span><div><h3>Baseline Architecture &amp; Recon</h3><p>Deploy realistic network topologies and enumerate exposed attack surfaces.</p></div><b>DISCOVER</b></div>
+        <div class="roadmap-step"><span>02</span><div><h3>Risk Scoring &amp; Analysis</h3><p>Map misconfigurations to CVSS v3.1 severity ratings and compliance benchmarks.</p></div><b>ASSESS</b></div>
+        <div class="roadmap-step"><span>03</span><div><h3>Segmentation &amp; Hardening</h3><p>Apply least-privilege IAM, network isolation, encryption, and defensive headers.</p></div><b>REMEDIATE</b></div>
+        <div class="roadmap-step"><span>04</span><div><h3>Re-Verification &amp; Evidence</h3><p>Re-scan hardened targets to prove risk closure and publish clean documentation.</p></div><b>VERIFY</b></div>
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section class="section-wrap contact-section" id="contact">
-      <div><span class="section-kicker">05 / GET IN TOUCH</span><h2>Let's connect and<br><span>build something useful.</span></h2><p>Interested in IT infrastructure, networking, cloud and cybersecurity opportunities or technical collaboration.</p></div>
-      <div class="contact-links"><a href="https://github.com/sahanihimanshu494-cpu" target="_blank" rel="noreferrer"><span>GitHub</span><b>View repositories ↗</b></a><a href="mailto:"><span>Email</span><b>Add your professional email ↗</b></a></div>
+      <div>
+        <span class="section-kicker">05 / GET IN TOUCH</span>
+        <h2>Ready to secure &amp;<br><span>scale your infrastructure.</span></h2>
+        <p>Open to IT Support, Network Support, Junior SysAdmin, and Cybersecurity Analyst roles across India (Remote / Hybrid / On-site).</p>
+      </div>
+      <div class="contact-links">
+        <a href="https://github.com/sahanihimanshu494-cpu" target="_blank" rel="noreferrer"><span>GitHub</span><b>@sahanihimanshu494-cpu ↗</b></a>
+        <a href="https://github.com/sahanihimanshu494-cpu/it-infrastructure-cybersecurity-portfolio" target="_blank" rel="noreferrer"><span>Lab Repository</span><b>Browse Source &amp; Reports ↗</b></a>
+      </div>
     </section>
   </main>
-  <footer class="footer"><a class="brand" href="#home"><span class="brand-mark">HS<span>.</span></span><span class="brand-name">HIMANSHU <b>SAHANI</b></span></a><span>© <span id="year"></span> · Built with curiosity and consistency.</span><a href="#home">BACK TO TOP ↑</a></footer>
+
+  <footer class="footer">
+    <a class="brand" href="#home"><span class="brand-icon">🛡</span><span class="brand-name">HS<b>.SEC</b></span></a>
+    <span>© <span id="year"></span> Himanshu Sahani · Built with precision &amp; security.</span>
+    <a href="#home">BACK TO TOP ↑</a>
+  </footer>
 </body>
 </html>
